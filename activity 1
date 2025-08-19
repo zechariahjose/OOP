@@ -1,0 +1,55 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        while(true) {
+        System.out.printf("Calculate\n 1 - Circle, 2 - Rectangle, 3 - Triangle");
+        Scanner scanner = new Scanner(System.in);
+        System.out.printf("\nEnter your choice: ");
+        int choice = scanner.nextInt();
+
+
+            switch (choice) {
+                case 1:
+                    System.out.printf("Enter the radius of the circle: ");
+                    double radius = scanner.nextDouble();
+
+                    double area = Math.PI * radius * radius;
+
+                    System.out.printf("\n\nArea of the circle: %.2f", area);
+
+                    break;
+                case 2:
+                    System.out.printf("Enter the length of the rectangle: ");
+                    double length = scanner.nextDouble();
+
+                    System.out.printf("Enter the width of the rectangle: ");
+                    double width = scanner.nextDouble();
+
+                    double Rarea = length * width;
+
+                    System.out.printf("Area of the rectangle %.2f", Rarea);
+
+                    break;
+                case 3:
+
+                    System.out.printf("Enter the base of the triangle: ");
+                    double base = scanner.nextDouble();
+
+                    System.out.printf("Enter the height of the triangle: ");
+                    double height = scanner.nextDouble();
+
+                    double Tarea = (base * height) / 2;
+
+                    System.out.printf("The area of the triangle: %.2f", Tarea);
+
+
+                    break;
+
+                default:
+                    System.out.printf("Error");
+            }
+        }
+    }
+
+}
