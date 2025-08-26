@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class AreaCalculator {
+class Shape {
     public double circle(double radius) {
         return Math.PI * radius * radius;
     }
@@ -41,7 +41,7 @@ class AreaCalculator {
 
 public class Main {
     public static void main(String[] args) {
-        AreaCalculator calculator = new AreaCalculator();
+        Shape shape = new Shape();
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
@@ -52,13 +52,13 @@ public class Main {
 
             switch (choice) {
                 case 1:
-                    calculator.calculateCircle(scanner);
+                    shape.calculateCircle(scanner);
                     break;
                 case 2:
-                    calculator.calculateRectangle(scanner);
+                    shape.calculateRectangle(scanner);
                     break;
                 case 3:
-                    calculator.calculateTriangle(scanner);
+                    shape.calculateTriangle(scanner);
                     break;
                 case 4:
                     System.out.println("Exiting...");
